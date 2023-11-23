@@ -7,9 +7,10 @@ class Xiosexample(CMakePackage):
 
     # FIXME: Add a proper url for your package's homepage here.
     homepage = "https://www.example.com"
-    url = "file:///scractch/fp0/lxw900/xios/xiosexample.zip"
+    git = "https://github.com/LiWangANU/xiosexample"
+    url = "https://github.com/LiWangANU/xiosexample/refs/heads/1.1.0.tar.gz"
 
-    version('local', '0123456789abcdef0123456789abcdef')
+    version('1.1.0', branch='main')
 	
 
     # FIXME: Add dependencies if required.
