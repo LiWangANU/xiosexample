@@ -1,13 +1,14 @@
 #include <iostream>
 #include "xios.hpp"
 
-int main() {
+int main(int argc, char *argv[]) {
+    MPI_Init(&argc, &argv);
     xios::CXios::initialize();
 
-    xios::read_config_file("path/to/your/config.xml");
+    //xios::read_config_file("path/to/your/config.xml");
 
-    xios::finalize();
-
+    //xios::finalize();
+    MPI_Finalize();
     return 0;
 }
 
