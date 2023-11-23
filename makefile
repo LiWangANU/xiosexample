@@ -7,6 +7,11 @@ EXECUTABLE = ./bin/xios_example
 
 all: $(EXECUTABLE)
 
+directories:
+	mkdir -p bin
+	mkdir -p include
+	mkdir -p lib
+
 $(EXECUTABLE): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
