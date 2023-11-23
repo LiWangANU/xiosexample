@@ -1,0 +1,25 @@
+<variable id="temperature">
+  <attribute name="long_name">Surface Temperature</attribute>
+  <attribute name="units">K</attribute>
+  <attribute name="standard_name">surface_temperature</attribute>
+</variable>
+
+<variable id="precipitation">
+  <attribute name="long_name">Precipitation Rate</attribute>
+  <attribute name="units">mm/day</attribute>
+  <attribute name="standard_name">precipitation_rate</attribute>
+</variable>
+
+<file_definition id="my_output_file">
+  <output frequency="1d">
+    <variable ref="temperature"/>
+    <variable ref="precipitation"/>
+  </output>
+  <path>/path/to/output/directory</path>
+  <name>output_file_prefix</name>
+</file_definition>
+
+<simulation>
+  <output_frequency>1d</output_frequency>
+  <output_file ref="my_output_file"/>
+</simulation>
