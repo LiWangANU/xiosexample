@@ -15,6 +15,7 @@ class Xiosexample(CMakePackage):
 
     # FIXME: Add dependencies if required.
     depends_on("xios")
+    depends_on("rapidxml")
 
     def cmake_args(self):
         args = []
