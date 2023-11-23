@@ -5,7 +5,7 @@ SRC = ./src/xios_example.cpp
 OBJ = $(SRC:.cpp=.o)
 EXECUTABLE = ./bin/xios_example
 
-all: $(EXECUTABLE)
+all: directories $(EXECUTABLE)
 
 directories:
 	mkdir -p bin
