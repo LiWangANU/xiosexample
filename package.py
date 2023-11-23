@@ -2,7 +2,7 @@
 from spack.package import *
 
 
-class Xiosexample(CMakePackage):
+class Xiosexample(Package):
     """FIXME: Put a proper description of your package here."""
 
     # FIXME: Add a proper url for your package's homepage here.
@@ -17,7 +17,10 @@ class Xiosexample(CMakePackage):
     depends_on("xios")
     depends_on("rapidxml")
 
-    def cmake_args(self):
-        args = []
-
-        return args
+    def install(self, spec, prefix):
+        make()
+        install_tree('.',prefix.include)
+        install_tree('.',prefix.bin)
+        install_tree('.',prefix.src)
+        install_tree('.',prefix.lib)
+        install_tree('.',prefix.inputs)
