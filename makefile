@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall
+CXXFLAGS = -std=c++11 -Wall -I /scratch/fp0/lxw900/spack/opt/spack/linux-rocky8-cascadelake/gcc-12.2.0/xios-2.5.2252-xhwsjmdvzplxts7s667jpufxpq4joi2b/include
 
 SRC = ./src/xios_example.cpp
 OBJ = $(SRC:.cpp=.o)
